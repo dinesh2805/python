@@ -1,0 +1,14 @@
+total_ticket_costdef total_ticket_cost(no_of_adults,no_of_childrens):
+    cost_for_adults=no_of_adults*37550.0
+    cost_for_childrens=no_of_childrens*(1/3*37550.0)
+    cost_for_both=cost_for_adults+cost_for_childrens
+    tax=cost_for_both*0.07
+    total_ticket_cost=cost_for_both+tax
+    offer= total_ticket_cost*0.1
+    total_ticket_cost_offer=total_ticket_cost-offer
+    return  total_ticket_cost_offer
+no_of_adults=int(input("enter no of adult passenger:"))
+no_of_childrens=int(input("enter no of children passenger:"))
+n=total_ticket_cost(no_of_adults,no_of_childrens)
+print("Total ticket cost is",n)
+
